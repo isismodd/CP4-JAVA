@@ -19,6 +19,12 @@ public class DragonBallSuper implements IDBSuper {
      */
     private String nome;
 
+
+    /**
+     * O número da esfera do personagem.
+     */
+    private int esfera;
+
     /**
      * O nível de Ki (energia de combate) do personagem.
      */
@@ -62,6 +68,31 @@ public class DragonBallSuper implements IDBSuper {
      */
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+
+    /**
+     * Retorna o número da esfera do personagem.
+     *
+     * @return o númeto da esfera como um valor inteiro.
+     */
+    public int getEsfera() {
+        return esfera;
+    }
+
+    /**
+     * Define o número da esfera. O número deve estar entre 1 e 7
+     *
+     * @param esfera é o número da esfera.
+     */
+    public void setEsfera(int esfera) throws EsferaInvalidaException
+    {
+        if (esfera < 1 || esfera > 7)
+        {
+            throw new EsferaInvalidaException("Número da esfera inválido. O número deve ser entre 1 e 7");
+        }
+        this.esfera = esfera;
+
     }
 
     /**
@@ -148,6 +179,7 @@ public class DragonBallSuper implements IDBSuper {
     public DragonBallSuper ler(String path) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(path + "/" + nome + ".txt"))) {
             this.nome = br.readLine();
+            this.esfera = Integer.parseInt(br.readLine());
             this.ki = Integer.parseInt(br.readLine());
             this.tecnicas = Integer.parseInt(br.readLine());
             this.velocidade = Integer.parseInt(br.readLine());
@@ -173,6 +205,7 @@ public class DragonBallSuper implements IDBSuper {
             }
             try (PrintWriter pw = new PrintWriter(new FileWriter(path + "/" + nome + ".txt"))) {
                 pw.println(nome);
+                pw.println(esfera);
                 pw.println(ki);
                 pw.println(tecnicas);
                 pw.println(velocidade);
