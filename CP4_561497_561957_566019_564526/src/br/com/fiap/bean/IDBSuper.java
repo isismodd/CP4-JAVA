@@ -1,5 +1,3 @@
-//Integrantes: Isis Macedo e Andrade RM 561497, Theodoro Spinola Furtado RM 566019, Ana Clara de Oliveira Nascimento RM 561957, Anabelle Rosseto Rodrigues RM 564526
-
 package br.com.fiap.bean;
 
 import java.io.IOException;
@@ -9,6 +7,10 @@ import java.io.IOException;
  * O objetivo é fornecer métodos padrão para ler e gravar informações de um objeto
  * do tipo DragonBallSuper
  */
+///  @author Isis Macedo e Andrade RM 561497
+///  @author Theodoro Spinola Furtado RM 566019
+///  @author Ana Clara de Oliveira Nascimento RM 561957
+///  @author Anabelle Rosseto Rodrigues RM 564526
 public interface IDBSuper {
 
     /**

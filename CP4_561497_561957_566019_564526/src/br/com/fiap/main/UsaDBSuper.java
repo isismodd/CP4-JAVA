@@ -1,5 +1,3 @@
-//Integrantes: Isis Macedo e Andrade RM 561497, Theodoro Spinola Furtado RM 566019, Ana Clara de Oliveira Nascimento RM 561957, Anabelle Rosseto Rodrigues RM 564526
-
 package br.com.fiap.main;
 
 import br.com.fiap.bean.DragonBallSuper;
@@ -7,6 +5,10 @@ import br.com.fiap.bean.DragonBallSuper;
 import javax.swing.*;
 import java.io.IOException;
 
+///  @author Isis Macedo e Andrade RM 561497
+///  @author Theodoro Spinola Furtado RM 566019
+///  @author Ana Clara de Oliveira Nascimento RM 561957
+///  @author Anabelle Rosseto Rodrigues RM 564526
 public class UsaDBSuper {
     public static void main(String[] args) {
         String nome;
